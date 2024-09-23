@@ -1,0 +1,132 @@
+body{
+    background-image: url("https://png.pngtree.com/background/20210717/original/pngtree-abstract-black-digital-technology-background-picture-image_1443841.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+form{
+    width: 80vw;
+    height: auto;
+    background-color: #383838;
+    color: white;
+    margin: 25px auto;
+    max-width: 750px;
+    padding: 30px 20px 2em 20px;
+    border-radius: 3px;
+    border: 2px solid;
+    border-color: rgba(0, 255, 0, 0.797);
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.612);
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 90%;
+}
+
+
+fieldset{
+    border: none;
+    padding: 0;
+}
+
+h1{
+    color: #26ff00;
+    font-size: 55px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 4px 4px 0 #000000,
+    -1px -1px 0 #fffdfd,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff;
+}
+
+p{
+    margin: 0 auto;
+    text-align: center;
+    color: #FFFFFF;
+    font-style: italic;
+    font-size: 20px;
+}
+
+#name-label, #email-label, #number-label, #label-dropdown, #label-job, #label-comments, legend{
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+#name, #email, #number, #dropdown, #job, #comments{
+    width:100%;
+    height: 35px;
+    font-size: 18px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    border: 0.5px solid #00000078;
+    border-radius: 4px;
+    background-color: #333333;
+    color: white;
+}
+
+select{
+    color: white;
+}
+
+select option {
+    background-color: #000000d5;
+}
+
+.inline{
+    display: block;
+    padding-left: 15px;
+}
+
+.inline input{
+    width: 20px;
+    height: 20px;
+}
+
+textarea{
+    max-height: 150px;
+    min-height: 100px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+#label-job, #label-comments{
+    margin-top: 7px;
+}
+
+#submit{
+    display: block;
+    width: 50%;
+    height: 37px;
+    margin: 0 auto;
+    font-size: 30px;
+    border-radius: 16px;
+    background-color: #26ff00;
+    color: white;
+}
+
+#submit:hover{
+    background-color: #00fd7e;
+}
+
+#submit:active{
+    background-color: #c3ff00;
+}
+
+label span{
+    font-style: italic;
+    font-weight: normal;
+}
+
+p span{
+    color: #26ff00;
+}
+
+::selection {
+    background-color: #4f9343ab;
+}
+
+input::placeholder, textarea::placeholder {
+    font-style: italic;
+}
+

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Spring Boot</title>
+</head>
+
+<!--HTML Cumple con las Expecificaciones, desde 1 al 13-->
+
+<body>
+    <!--8, 9, 10, 11, 12, 13-->
+    <nav id="navbar">
+        <header>Spring Boot</header>
+        <ul>
+            <li><a class="nav-link" href="#Introducción_a_Spring_Boot">Introducción a Spring Boot</a></li>
+            <li><a class="nav-link" href="#Preparativos_Esenciales_para_Desarrollar_con_Spring_Boot">Preparativos
+                    Esenciales para Desarrollar con Spring Boot</a></li>
+            <li><a class="nav-link" href="#¿Por_Qué_Optar_por_Spring_Boot?">¿Por Qué Optar por Spring Boot?</a></li>
+            <li><a class="nav-link" href="#1._Configurar_el_Entorno_de_Desarrollo">1. Configurar el Entorno de
+                    Desarrollo</a></li>
+            <li><a class="nav-link" href="#2._Crear_un_Proyecto_Spring_Boot">2. Crear un Proyecto Spring Boot</a></li>
+            <li><a class="nav-link" href="#3._Crear_un_Controlador_MVC">3. Crear un Controlador MVC</a></li>
+            <li><a class="nav-link" href="#4._Crear_una_Vista">4. Crear una Vista</a></li>
+            <li><a class="nav-link" href="#5._Configurar_la_Aplicación_Principal">5. Configurar la Aplicación
+                    Principal</a></li>
+            <li><a class="nav-link" href="#6._Ejecutar_el_Proyecto">6. Ejecutar el Proyecto</a></li>
+            <li><a class="nav-link" href="#7._Probar_la_Aplicación">7. Probar la Aplicación</a></li>
+            <li><a class="nav-link" href="#Referencías">Referencías</a></li>
+        </ul>
+    </nav>
+
+    <!--1, 2, 3, 4, 5, 6, -->
+    <main id="main-doc">
+        <section class="main-section" id="Introducción_a_Spring_Boot">
+            <header>Introducción a Spring Boot</header>
+            <article>
+                <p>Spring Boot es un marco de desarrollo basado en <span><a
+                            href="https://www.java.com/es/download/help/whatis_java.html"
+                            target="_blank">Java</a></span> que ha
+                    transformado la creación de aplicaciones
+                    empresariales al reducir significativamente la complejidad en la configuración y puesta en marcha.
+                    Nacido dentro del ecosistema de Spring Framework, Spring Boot está diseñado para simplificar el
+                    desarrollo de aplicaciones robustas y escalables, ofreciendo configuraciones automáticas y una
+                    estructura flexible que permite a los desarrolladores centrarse en la lógica de negocio en lugar de
+                    preocuparse por detalles técnicos de infraestructura. Esta eficiencia hace que sea ideal para
+                    proyectos de gran envergadura.
+                </p>
+                <p>Una de las características más destacadas de Spring Boot es su enfoque en la configuración mínima y
+                    la capacidad de poner en marcha aplicaciones listas para producción rápidamente. Al proporcionar una
+                    integración sin fisuras con otros componentes del ecosistema Spring, como <span><a target="_blank"
+                            href="https://spring.io/projects/spring-data">Spring Data</a></span>, <span><a
+                            target="_blank" href="https://spring.io/projects/spring-security">Spring
+                            Security</a></span>, y <span><a target="_blank"
+                            href="https://spring.io/projects/spring-cloud">Spring
+                            Cloud</a></span>, permite a los desarrolladores crear soluciones de software completas y
+                    listas para escalar, ya sea para construir <span><a target="_blank"
+                            href="https://aws.amazon.com/es/what-is/restful-api/#:~:text=las%20API%20RESTful%3F-,%C2%BFQu%C3%A9%20es%20API%20RESTful%3F,llevar%20a%20cabo%20varias%20tareas.">APIs
+                            RESTful</a></span> o aplicaciones web completas, facilitando la
+                    creación de arquitecturas empresariales modernas y distribuidas.
+                </p>
+
+                <ul>
+                    <li>
+                        <h3>Perspectiva de APIs REST:</h3>
+                        <p>Spring Boot facilita la creación de microservicios y APIs RESTful, siendo una opción ideal
+                            para arquitecturas distribuidas y servicios escalables. Con soporte nativo para patrones
+                            como REST, <span><a target="_blank"
+                                    href="https://medium.com/@truongbui95/serialization-and-deserialization-of-java-json-xml-libraries-42a1919d7f09">serialización
+                                    JSON/XML</a></span>, y herramientas integradas como Spring Data para el acceso
+                            a bases de datos, es una elección predilecta para desarrollar servicios backend robustos y
+                            fácilmente integrables.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Perspectiva de Aplicaciones web:</h3>
+                        <p>Además de su enfoque en APIs, Spring Boot permite la creación de aplicaciones web completas,
+                            integrando el patrón MVC (Modelo-Vista-Controlador) mediante <span><a target="_blank"
+                                    href="https://docs.spring.io/spring-framework/reference/web/webmvc.html">Spring
+                                    MVC.</a></span> Con el uso de
+                            motores de plantillas como <span><a target="_blank"
+                                    href="https://docs.spring.io/spring-framework/reference/web/webmvc-view/mvc-thymeleaf.html">Thymeleaf</a></span>
+                            o <span><a target="_blank"
+                                    href="https://docs.spring.io/spring-framework/reference/web/webmvc-view/mvc-freemarker.html">Freemarker</a></span>,
+                            Spring Boot permite generar vistas
+                            dinámicas y ricas. Su integración con módulos como Spring Security facilita la gestión de
+                            autenticación y autorización, haciendo de Spring Boot una opción integral para aplicaciones
+                            web empresariales con altos requerimientos de seguridad y escalabilidad.
+                        </p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Preparativos_Esenciales_para_Desarrollar_con_Spring_Boot">
+            <header>Preparativos Esenciales para Desarrollar con Spring Boot</header>
+            <article>
+                <p>Antes de comenzar a desarrollar con Spring Boot, es fundamental tener en cuenta ciertos aspectos
+                    clave que te ayudarán a aprovechar al máximo este marco:
+                </p>
+                <ul>
+                    <li>Conocimientos básicos de <span><a target="_blank"
+                                href="https://devdocs.io/openjdk~21/">Java</a></span> y
+                        <span><a target="_blank" href="https://spring.io/projects/spring-framework">Spring
+                                Framework</a></span> Spring
+                        Boot se basa en Java, por lo que es
+                        crucial tener una comprensión sólida del lenguaje, así como de conceptos básicos del Spring
+                        Framework, como inyección de dependencias y manejo de beans.
+                    </li>
+
+                    <li>Manejo de <span><a target="_blank" href="https://maven.apache.org/">Maven</a></span> o <span><a
+                                target="_blank" href="https://gradle.org/">Gradle</a></span>: Spring Boot usa estas
+                        herramientas para
+                        gestionar dependencias y
+                        compilación. Familiarizarse con ellas te permitirá automatizar la construcción del proyecto y
+                        gestionar las bibliotecas fácilmente.
+                    </li>
+
+                    <li>Arquitectura de APIs REST: Si tu objetivo es desarrollar servicios web o microservicios,
+                        entender los principios de REST (verbos <span><a target="_blank"
+                                href="https://es.wikipedia.org/wiki/Protocolo_de_transferencia_de_hipertexto">HTTP</a></span>,
+                        estructuras de rutas,
+                        serialización/deserialización de JSON) es esencial para crear APIs eficientes y escalables.
+                    </li>
+
+                    <li>Conocimiento de bases de datos y ORM: Si tu aplicación interactúa con una base de datos, es útil
+                        aprender <span><a target="_blank" href="https://en.wikipedia.org/wiki/Jakarta_Persistence">JPA
+                                (Java Persistence
+                                API)</a></span> o <span><a target="_blank"
+                                href="https://hibernate.org/orm/">Hibernate</a></span> para
+                        el mapeo de entidades y el manejo de
+                        transacciones, que son integrados en Spring Boot a través de Spring Data.
+                    </li>
+
+                    <li>Conceptos de seguridad web: Spring Boot facilita la integración de Spring Security, por lo que
+                        conocer conceptos básicos de seguridad como autenticación, autorización, y manejo de sesiones te
+                        permitirá proteger tus aplicaciones desde el inicio.
+                    </li>
+
+                    <li>Entendimiento de la arquitectura de microservicios: Aunque Spring Boot puede usarse para
+                        aplicaciones monolíticas, es ideal para construir microservicios. Es útil comprender cómo
+                        funcionan los microservicios, el balanceo de carga, y la comunicación entre servicios para
+                        aprovechar el potencial de Spring Boot en entornos distribuidos.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="¿Por_Qué_Optar_por_Spring_Boot?">
+            <header>¿Por Qué Optar por Spring Boot?</header>
+            <article>
+                <p>Spring Boot ofrece ventajas clave frente a otros frameworks y tecnologías como <span><a
+                            href="https://nodejs.org/en/ " target="_blank">Node.js</a></span> o <span><a
+                            href="https://angular.dev/" target="_blank">Angular</a></span>, que
+                    pueden hacer de él una elección superior para ciertos proyectos:
+                </p>
+                <ul>
+                    <li>Configuración y <span><a href="https://es.wikipedia.org/wiki/Desarrollo_%C3%A1gil_de_software"
+                                target="_blank">Desarrollo
+                                Ágil</a></span>: Spring Boot se distingue por su capacidad para simplificar la
+                        configuración y el desarrollo. Con su enfoque en "convención sobre configuración", proporciona
+                        un entorno de desarrollo más ágil al reducir la necesidad de configuraciones manuales extensas.
+                        Esto contrasta con frameworks como Node.js, donde la configuración y la integración de módulos
+                        pueden ser más detalladas y laboriosas.
+                    </li>
+
+                    <li>Ecosistema y Herramientas Empresariales: Aprovechando el amplio ecosistema de Spring, Spring
+                        Boot se integra de manera fluida con herramientas como Spring Security, Spring Data y Spring
+                        Cloud, ofreciendo un conjunto completo de soluciones para desarrollo de <span><a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Frontend_and_backend#:~:text=In%20software%20engineering%2C%20the%20terms,the%20physical%20infrastructure%20or%20hardware.">backend</a></span>.
+                        Mientras
+                        Angular está orientado principalmente al desarrollo del <span><a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Frontend_and_backend#:~:text=In%20software%20engineering%2C%20the%20terms,the%20physical%20infrastructure%20or%20hardware.">frontend</a></span>,
+                        Spring Boot se centra en
+                        ofrecer un soporte robusto para la construcción de aplicaciones empresariales complejas y
+                        seguras.
+                    </li>
+
+                    <li>Escalabilidad y Desempeño: Con el respaldo de Java, Spring Boot proporciona una plataforma para
+                        construir aplicaciones con un alto nivel de escalabilidad y rendimiento. Su modelo de gestión de
+                        hilos y recursos permite manejar aplicaciones de gran escala de manera eficiente. A diferencia
+                        de Node.js, que utiliza un modelo de I/O no bloqueante, Spring Boot puede ser más adecuado para
+                        aplicaciones empresariales que requieren una gestión más tradicional de hilos y recursos, así
+                        como una integración eficaz con tecnologías de contenedores como <span><a target="_blank"
+                                href="https://www.redhat.com/es/topics/containers/what-is-docker">Docker</a></span>.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="1._Configurar_el_Entorno_de_Desarrollo">
+            <header>1. Configurar el Entorno de Desarrollo</header>
+            <article>
+                <ul>
+                    <li><span><a target="_blank" href="https://www.java.com/es/download/help/develop_es.html">Instalar
+                                Java
+                                JDK</a></span>: Asegúrate de tener el Java Development Kit (JDK) instalado en tu
+                        sistema. Spring Boot requiere al menos JDK 8.
+                    </li>
+                    <li>Instalar un IDE: Descarga e instala un entorno de desarrollo integrado (IDE) como
+                        <span><a target="_blank"
+                                href="https://www.jetbrains.com/idea/download/?section=windows">IntelliJ
+                                IDEA</a></span>, <span><a href="https://www.eclipse.org/downloads/">Eclipse</a></span> o
+                        <span><a target="_blank" href="https://code.visualstudio.com/download">VS Code</a></span>. Estos
+                        IDEs tienen
+                        soporte para Spring
+                        Boot y facilitan el desarrollo.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="2._Crear_un_Proyecto_Spring_Boot">
+            <header>2. Crear un Proyecto Spring Boot</header>
+            <article>
+                <p>Acceder a <span><a target="_blank" href="https://start.spring.io/">Spring Initializr</a></span>:</p>
+                <ul>
+                    <li>Selecciona "Maven" o "Gradle" como herramienta de construcción.</li>
+                    <li>Elige "Java" como lenguaje de programacion</li>
+                    <li>Selecciona la versión estable más reciente de Spring boot</li>
+                    <li>Define el la metadata del proyecto:
+                        <ol>
+                            <li>Nombre del Proyecto: <code>MiApp</code></li>
+                            <li>Grupo: <code>com.ejemplo</code></li>
+                            <li>Artefacto: <code>MiApp</code></li>
+                            <li>Packaging: <code>Jar</code></li>
+                            <li>Java Version: 11 o superior</li>
+                            <li>Dependencies: <code>Spring Web</code>, <code>Thymeleaf</code> (Si deseas usar Thymeleaf)
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Generar el Proyecto: Haz clic en "Generate" para descargar un archivo ZIP con el
+                        esqueleto del proyecto.
+                    </li>
+                    <li>Descomprimir el Archivo: Extrae el archivo ZIP descargado.
+                    </li>
+                    <li>Abrir el Proyecto: Importa el proyecto en tu IDE favorito. La mayoría de los IDEs
+                        permiten importar proyectos Maven o Gradle directamente.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="3._Crear_un_Controlador_MVC">
+            <header>3. Crear un Controlador MVC</header>
+            <article>
+                <p>En el directorio <code>src/main/java/com/ejemplo/miapp</code>, crea un paquete llamado
+                    <code>controller</code>, y añade el sigueinete codigo:
+                </p>
+                <code class="cad-code">
+            package com.ejemplo.miapp.controller
+            import org.springframework.stereotype.Controller;
+            import org.springframework.web.bind.annotation.GetMapping;
+            import org.springframework.web.bind.annotation.RequestMapping
+            @Controller
+            @RequestMapping("/hello")
+            public class HelloController {
+                
+                @GetMapping
+                public String sayHello() {
+                    return "hello"; // Nombre de la vista
+                }
+            }
+        </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="4._Crear_una_Vista">
+            <header>4. Crear una Vista</header>
+            <article>
+                <p>En <code>src/main/resources</code>, crea un directorio llamado
+                    <code>templates</code> (si usas Thymeleaf). Dentro del directorio, Crea un archivo
+                    <code>hello.html</code> en <code>src/main/resources/templates</code>, y añade el siguiente codigo:
+                </p>
+                <code class="cad-code">
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html xmlns:th="http://www.thymeleaf.org"&gt;
+                                &lt;head&gt;
+                                    &lt;title&gt;Saludo&lt;/title&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                    &lt;h1&gt;¡Hola, Spring Boot!&lt;/h1&gt;
+                                &lt;/body&gt;
+                            &lt;/html&gt;
+                        </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="5._Configurar_la_Aplicación_Principal">
+            <header>5. Configurar la Aplicación Principal</header>
+            <article>
+                <p>Verificar la Clase Principal: Asegúrate de que la clase principal de tu aplicación esté
+                    correctamente configurada en <code>src/main/java/com/ejemplo/miapp</code>.</p>
+
+                <code class="cad-code">
+            package com.ejemplo.miap
+            import org.springframework.boot.SpringApplication;
+            import org.springframework.boot.autoconfigure.SpringBootApplicatio
+            @SpringBootApplication
+            public class MiappApplication{
+                public static void main(String[] args) {
+                    SpringApplication.run(MiappApplication.class, args);
+                }
+            }
+        </code>
+            </article>
+        </section>
+
+        <section class="main-section" id="6._Ejecutar_el_Proyecto">
+            <header>6. Ejecutar el Proyecto</header>
+            <article>
+                <p>Ejecutar la Aplicación: Usa tu IDE para ejecutar la clase <code>MiappApplication</code>, o bien, usa
+                    la línea de comandos: <code>./mvnw spring-boot:run</code> o si usas gradle
+                    <code>./gradlew bootRun</code>
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="7._Probar_la_Aplicación">
+            <header>7. Probar la Aplicación</header>
+            <article>
+                <p>Acceder a la Aplicación: Abre un navegador web y dirígete a <a target="_blank"
+                        href="http://localhost:8080/hello"><code>http://localhost:8080/hello</code></a>.
+                    Deberías ver el mensaje <code>"¡Hola, Spring Boot!"</code>.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Referencías">
+            <header>Referencías</header>
+            <article>
+                <p>Para más información, puede visitar los siguientes sitios web:</p>
+                <ul>
+                    <li><a target="_blank" href="https://spring.io/projects/spring-boot">Sprig boot</a></li>
+                    <li><a target="_blank" href="https://devdocs.io/spring_boot/">DevDocs</a></li>
+                    <li><a target="_blank" href="https://en.wikipedia.org/wiki/Spring_Boot">Wikipedia</a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/watch?v=Q9K29r5xQ6M">YouTube: Spring Boot
+                            Tutorial</a></li>
+                </ul>
+                <br><br>
+            </article>
+        </section>
+    </main>
+
+</body>
+
+</html>
