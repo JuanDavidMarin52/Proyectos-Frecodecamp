@@ -1,179 +1,159 @@
-body{
-    background:linear-gradient(45deg, #5758cda4, #000000be);
-    margin: 0px;
-    padding: 0px;
+body {
+  background: linear-gradient(45deg, #5758cda4, #000000be);
+  margin: 0;
+  padding: 0;
 }
 
-
 .encabezado {
-    width: 95%;
-    height: auto;
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding: 4px 3px 10px 3px;
-    background-color: rgb(219, 211, 159);
-    border-bottom: 6px ridge rgb(59, 59, 59);
-    box-shadow: 0px -2px 5px 1px rgb(0, 0, 0);
+  width: 95%;
+  max-width: 1000px;
+  margin: 5px auto;
+  padding: 4px 3px 10px;
+  background-color: rgb(219, 211, 159);
+  border-bottom: 6px ridge rgb(59, 59, 59);
+  box-shadow: 0 -2px 5px 1px rgb(0, 0, 0);
 }
 
 h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 5vw;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    letter-spacing: 5px;
-    text-shadow: 6px 6px 7px #414141ad;
-    text-transform: uppercase;
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 5vw;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 5px;
+  text-shadow: 6px 6px 7px #414141ad;
+  text-transform: uppercase;
 }
 
 .encabezado p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: min(21px, 2vw);
-    font-style: italic;
-    text-align: center;
-    color: #000000;
-    padding: 0 20px;
-    margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: min(21px, 2vw);
+  font-style: italic;
+  text-align: center;
+  color: #000;
+  padding: 0 20px;
+  margin: 0;
 }
 
-
 #img-div {
-    background-color: rgb(219, 211, 159);
-    width: 95%;
-    height: auto;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 6px 3px 8px 3px;
-    box-shadow: 0px -2px 3px 1px rgb(0, 0, 0);
-    margin-bottom: 2px;
+  background-color: rgb(219, 211, 159);
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto 2px;
+  padding: 6px 3px 8px;
+  box-shadow: 0 -2px 3px 1px rgb(0, 0, 0);
 }
 
 #image {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    max-width: 100%;
-    margin-bottom: 2px;
-    box-shadow: 0px 0px 7px 1px rgb(0, 0, 0);
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 2px;
+  box-shadow: 0 0 7px 1px rgb(0, 0, 0);
 }
 
 #img-caption {
-    width: 98%;
-    margin: 0 auto;
-    color: rgb(0, 0, 0);
-    background-color: rgba(162, 161, 161, 0.759);
-    padding: 5px;
-    border-radius: 3px;
-    font-size: min(15px, 3vw);
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-    box-shadow: 0px 0px 3px 1px rgb(0, 0, 0);
+  width: 98%;
+  margin: 0 auto;
+  color: rgb(0, 0, 0);
+  background-color: rgba(162, 161, 161, 0.759);
+  padding: 5px;
+  border-radius: 3px;
+  font-size: min(15px, 3vw);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  box-shadow: 0 0 3px 1px rgb(0, 0, 0);
 }
 
-#tribute-info{
-    width: 95%;
-    max-width: 1000px;
-    height: auto;
-    margin: 0 auto;
-    margin-bottom: 4px;
-    padding: 0px 3px 7px 3px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(39, 39, 39);
-    background-color: rgb(219, 211, 159);
-    box-shadow: 0px -2px 3px 1px rgb(0, 0, 0);
+#tribute-info {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto 4px;
+  padding: 0 3px 7px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(39, 39, 39);
+  background-color: rgb(219, 211, 159);
+  box-shadow: 0 -2px 3px 1px rgb(0, 0, 0);
 }
 
-h2{
-    height: auto;
-    padding: 7px 3px 0 3px;
-    font-size: min(20px, 4vw);
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.706);
-    color: #000000;
-    font-weight: 800;
-    text-transform:capitalize;
-    text-wrap:balance;
+h2 {
+  padding: 7px 3px 0;
+  font-size: min(20px, 4vw);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.706);
+  color: #000;
+  font-weight: 800;
+  text-transform: capitalize;
 }
 
-.bold{
-    font-weight: 600;
-    color: #000000;
+.bold {
+  font-weight: 600;
+  color: #000;
 }
 
-.cursive{
-    font-style: italic;
+.cursive {
+  font-style: italic;
 }
 
-div>ul{
-    margin-right: 15px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.706);
+div > ul {
+  margin-right: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.706);
 }
 
-div > ul > li{
-    border-bottom: 1px solid #6c6c6c;
-    padding: 4px 0px;
-    margin: 0 auto;
+div > ul > li {
+  border-bottom: 1px solid #6c6c6c;
+  padding: 4px 0;
+  margin: 0 auto;
 }
 
-
-div > ul > li:last-child{
-    border-bottom: none;
+div > ul > li:last-child {
+  border-bottom: none;
 }
 
-div>.refletion{
-    text-align: center;
-    font-style: italic;
-    font-size: min(15px, 3vw);
-    font-weight: bold;
-    padding: 0 20px;
+div > .refletion {
+  text-align: center;
+  font-style: italic;
+  font-size: min(15px, 3vw);
+  font-weight: bold;
+  padding: 0 20px;
 }
 
-footer{
-    width: 95%;
-    max-width: 1000px;
-    height: auto;
-    margin: 0 auto;
-    margin-top: -13px;
-    margin-bottom: 4px;
-    padding: 1px 3px 1px 3px;
-    background-color: #000000;
-    color: #898989;
-    text-align: center;
-    font-size: min(15px, 3vw);
+footer {
+  width: 95%;
+  max-width: 1000px;
+  margin: 4px auto;
+  padding: 1px 3px;
+  background-color: #000;
+  color: #898989;
+  text-align: center;
+  font-size: min(15px, 3vw);
 }
 
-#tribute-link{
-    color: #000000;
+#tribute-link {
+  color: #000;
 }
 
-a{
-    color: rgba(250, 235, 215, 0.717);
+a {
+  color: rgba(250, 235, 215, 0.717);
 }
 
-a:hover{
-    color: #3c00ff;
-    text-decoration: underline;
+a:hover {
+  color: #3c00ff;
+  text-decoration: underline;
 }
 
-a:active{
-    color: #6b1173;
-    text-decoration: none;
+a:active {
+  color: #6b1173;
+  text-decoration: none;
 }
 
-#tribute-link:hover{
-    color: #3c00ff;
-    text-decoration: underline;
+#tribute-link:hover {
+  color: #3c00ff;
+  text-decoration: underline;
 }
 
-#tribute-link:active{
-    color: #6b1173;
-    text-decoration: none;
+#tribute-link:active {
+  color: #6b1173;
+  text-decoration: none;
 }
-
-
-

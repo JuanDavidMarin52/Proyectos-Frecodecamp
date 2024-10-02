@@ -3,11 +3,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid #ff0000; */
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -15,7 +14,7 @@ html{
 #header {
     position: fixed;
     top: 0;
-    display: inline-flex;
+    display: flex;
     z-index: 1;
     align-items: center;
     justify-content: space-between;
@@ -23,30 +22,25 @@ html{
     background-color: rgba(0, 0, 0, 0.971);
     border-bottom: 2px solid rgb(0, 140, 140);
     box-shadow: 1px 0 5px 3px #000;
-
-    /* Posible cambio en media */
     height: 120px;
 }
 
-#container-header{
+#container-header {
     display: flex;
-
-    /* Posible cambio en media */
-    width: 400px;
+    width: 400px; /* Posible cambio en media */
     height: 100%;
     padding: 10px 0;
     padding-left: 30px;
 }
 
-#header-img{
+#header-img {
     width: 100%;
 }
 
 /* Navegación */
 #nav-bar {
     width: 600px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 0 20px;
 }
 
 #nav-bar ul {
@@ -55,18 +49,18 @@ html{
     list-style: none;
 }
 
-#nav-bar li{
+#nav-bar li {
     padding: 6px 7px;
     border-radius: 4px;
     border-bottom: 1px solid #C0C0C0;
 }
 
-#nav-bar li:hover{
+#nav-bar li:hover {
     background-color: rgb(3, 169, 169);
     box-shadow: 0 0 5px 3px #777777fb;
 }
 
-#nav-bar li:active{
+#nav-bar li:active {
     background-color: aqua;
 }
 
@@ -74,26 +68,22 @@ html{
     text-decoration: none;
     color: rgb(242, 242, 242);
     font-weight: bold;
-    font-family: sans-serif;
     font-size: 0.9rem;
-    
 }
 
-#nav-bar li a:hover{
+#nav-bar li a:hover {
     color: black;
 }
 
-
-@media(max-width: 700px){
-
-    #container-header{
+@media (max-width: 700px) {
+    #container-header {
         margin: auto;
         width: auto;
         height: auto;
         padding: 0;
     }
 
-    #nav-bar{
+    #nav-bar {
         display: none;
         position: absolute;
         z-index: -1;
@@ -102,7 +92,6 @@ html{
         padding: 0;
     }
 }
-
 
 /* Main */
 main {
@@ -132,11 +121,11 @@ form #email {
     box-shadow: 0 0 4px 2px #6d6d6dcf;
 }
 
-form #email:placeholder-shown{
+form #email:placeholder-shown {
     background-color: rgb(192, 192, 192);
 }
 
-form #email::placeholder{
+form #email::placeholder {
     color: #000;
 }
 
@@ -154,10 +143,9 @@ form #submit {
     text-shadow: 0 1px 2px #ffffff;
 }
 
-form #submit:hover{
+form #submit:hover {
     background-color: rgb(2, 197, 191);
 }
-
 
 /* Beneficios */
 #Beneficios {
@@ -176,7 +164,7 @@ form #submit:hover{
     height: 200px;
 }
 
-.beneficios:hover{
+.beneficios:hover {
     background-color: bisque;
 }
 
@@ -203,19 +191,16 @@ form #submit:hover{
     height: 100px;
     font-size: 1.2rem;
     text-align: justify;
-    overflow:auto;
+    overflow: auto;
 }
 
-@media(max-width: 900px){
-    #Beneficios{
+@media (max-width: 900px) {
+    #Beneficios {
         display: flex;
         flex-direction: column;
         column-gap: 0;
     }
 }
-
-
-
 
 /* Explicación */
 #Explicacion {
@@ -225,7 +210,7 @@ form #submit:hover{
 /* Video */
 #video {
     display: flex;
-    height: 500px; 
+    height: 500px;
     width: 850px;
     margin: auto;
     margin-bottom: 2px;
@@ -245,7 +230,6 @@ figcaption {
     padding: 10px;
     border: 1px solid #000;
 }
-
 
 /* Precios */
 #Precios {
@@ -295,11 +279,10 @@ figcaption {
     box-shadow: 0 0 10px 4px rgba(218, 197, 168, 1);
 }
 
-#Basic:hover{
+
+#Basic:hover {
     background-color: rgb(241, 217, 183);
 }
-
-
 
 #Personalized {
     background-color: #C0C0C0;
@@ -307,7 +290,7 @@ figcaption {
     box-shadow: 0 0 10px 4px #c0c0c0;
 }
 
-#Personalized:hover{
+#Personalized:hover {
     background-color: #d5d5d5;
 }
 
@@ -317,9 +300,8 @@ figcaption {
     box-shadow: 0 0 10px 4px #CDA434;
 }
 
-#Business:hover{
+#Business:hover {
     background-color: #e0b337;
-    font-optical-sizing: 30;
 }
 
 /* Títulos de categoría */

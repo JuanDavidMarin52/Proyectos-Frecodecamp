@@ -9,81 +9,65 @@
 </head>
 
 <body>
-    
-    <!--1-->
     <h1 id="title">Approval Poll</h1>
-
-    <!--2-->
-    <p id="description">Thank you for help me. Please answer honestly</p>
+    <p id="description">Thank you for helping me. Please answer honestly</p>
     <p id="create">Created by <span>Juan David Chalarca M.</span></p>
 
-    <!--3-->
     <form id="survey-form">
         <fieldset>
-            <!--4, 10, 11-->
             <label id="name-label" for="name">Name*</label>
             <input id="name" name="name" type="text" required placeholder="Enter Full Name:">
-            <!--5, 6, 10, 11-->
             <label id="email-label" for="email">Email*</label>
             <input id="email" name="email" type="email" required placeholder="Enter email address:">
-
-            <!--7, 8, 9, 10, 11-->
             <label id="number-label" for="number">Years of experience<span>(optional)</span></label>
             <input id="number" name="number" type="number" max="99" min="0" placeholder="Enter years of experience:">
-
-            <!--12-->
             <label for="dropdown" id="label-dropdown">Which option best describes your programming skills?*</label>
-            <select id="dropdown" name="dropdown">
+            <select id="dropdown" name="dropdown" required>
                 <option selected disabled>Select an option</option>
                 <option value="1">Beginner</option>
                 <option value="2">Junior</option>
                 <option value="3">Professional</option>
                 <option value="4">Senior</option>
-                <option value="5">other</option>
+                <option value="5">Other</option>
             </select>
-
         </fieldset>
 
         <fieldset>
             <legend>How do you think my survey looks?</legend>
-            <!--13-->
-            <label for="opinion1" class="inline"><input type="radio" id="opinion1" name="opinion" value="very-well"> Very well</label>
+            <label for="opinion1" class="inline"><input type="radio" id="opinion1" name="opinion" value="very-well" required> Very well</label>
             <label for="opinion2" class="inline"><input type="radio" id="opinion2" name="opinion" value="well"> Well</label>
-            <label for="opinion3" class="inline"><input type="radio" id="opinion3" name="opinion" value="More or less"> More or less</label>
+            <label for="opinion3" class="inline"><input type="radio" id="opinion3" name="opinion" value="more-or-less"> More or less</label>
             <label for="opinion4" class="inline"><input type="radio" id="opinion4" name="opinion" value="bad"> Bad</label>
             <label for="opinion5" class="inline"><input type="radio" id="opinion5" name="opinion" value="very-bad"> Very Bad</label>
         </fieldset>
+
         <fieldset>
             <label for="job" id="label-job">Would you recommend me for any job?*</label>
             <select id="job" name="job" required>
                 <option selected disabled>Select an option</option>
                 <option value="1">No</option>
                 <option value="2">Yes</option>
-                <option value="3">maybe</option>
-                <option value="4">don't know</option>
+                <option value="3">Maybe</option>
+                <option value="4">Don't know</option>
             </select>
         </fieldset>
 
         <fieldset>
             <legend>What do you think should be improved?</legend>
-            <!--14-->
-            <label for="mejora1" class="inline"><input id="mejora1" type="checkbox" value="html"> Improve the html structure</label>
+            <label for="mejora1" class="inline"><input id="mejora1" type="checkbox" value="html"> Improve the HTML structure</label>
             <label for="mejora2" class="inline"><input id="mejora2" type="checkbox" value="css-font"> Change the font</label>
             <label for="mejora3" class="inline"><input id="mejora3" type="checkbox" value="css-backg-color"> Change colors</label>
-            <label for="mejora4" class="inline"><input id="mejora4" type="checkbox" value="js"> Integrate javaScript</label>
+            <label for="mejora4" class="inline"><input id="mejora4" type="checkbox" value="js"> Integrate JavaScript</label>
             <label for="mejora5" class="inline"><input id="mejora5" type="checkbox" value="optimize-code"> Simplify code</label>
             <label for="mejora6" class="inline"><input id="mejora6" type="checkbox" value="css-margins"> Improve margins</label>
         </fieldset>
 
         <fieldset>
-            <!--15-->
             <label for="comments" id="label-comments">Any comments or suggestions?</label>
             <textarea id="comments" name="comments" placeholder="Enter your comments:"></textarea>
         </fieldset>
 
-        <!--16-->
         <button type="submit" id="submit" name="submit">Submit</button>
-
     </form>
 </body>
 
